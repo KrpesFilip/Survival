@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+ 
+    <title>My website</title>
+</head>
+<body>
+    <header class="header">
+        <img loading="lazy" class="logo" src="slike/Logo.png" />
+        <nav class="navbar">
+            <a id="selected" href="#">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About me</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
+        <a href="#contact">
+            <button type="button">Contact me</button>
+        </a>
+    </header>
+
+    <div class="page blue-backgroud">
+        <div class="col-container">
+            <div class="col-2">
+                <b>Hey, I am John</b>
+                <div class="title">I create <span style="display: contents; color: #5E3BEE">product design</span> and brand experience</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                </p>
+                <a href="#contact" style="text-decoration: none">
+                    <button type="button" style="width: fit-content">Get in touch</button>
+                </a>
+            </div>
+
+            <div class="col-2">
+                <img loading="lazy" src="slike/nekilogo.png"  />
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="skills">
+        <div class="col-container" style="justify-content: space-between">
+            <div class="row-container">
+                <div class="row-1">
+                    <b>My Skills</b>
+                    <div class="title">My Expertise</div>
+                </div>
+
+                <div class="col-container">
+                    <div class="col-4">
+                        <div class="card card-container card-purple-hover blue-backgroud">
+                            <img loading="lazy" src="slike/product-chain 1.png"  class="icon" />
+                            <h2>Strategy & Direction</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card-container card-purple-hover blue-backgroud">
+                            <img loading="lazy" src="slike/tag 1.png"  class="icon" />
+                            <h2>Branding & Logo</h2>
+                            <p>
+                                LLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card-container card-purple-hover blue-backgroud">
+                            <img loading="lazy" src="slike/feather-pen 1.png"  class="icon" />
+                            <h2>UI & UX Design</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card card-container card-purple-hover blue-backgroud">
+                            <img loading="lazy" src="slike/feather-pen 1-1.png"  class="icon" />
+                            <h2>Webflow Development</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page" id="about">
+        <div class="col-container">
+            <div class="col-2">
+                <img loading="lazy"   src="slike/About Me.png" />
+            </div>
+            <div class="col-2">
+                <b style="margin-left:50px ;">About</b>
+                <div class="title" style="margin-left:50px ;">About Me</div>
+                <p style="margin-left:50px ;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque.
+                </p>
+                <p style="margin-left:50px ;">
+                    Sit turpis pretium eget maecenas. Vestibulum dolor mattis consectetur eget commodo vitae. Amet pellentesque sit pulvinar lorem mi a, euismod risus r.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="portfolio">
+        <div class="col-container" style="justify-content: space-between">
+            <div class="row-container">
+                <div class="row-1">
+                    <b>Recent Projects</b>
+                  
+                    <div class="title">My Portfolio</div>
+                </div>
+            </div>
+         
+            <button class=" special-button">
+                <img src="./slike/Social icon.png" /> <p>Visit My Dribbble</p>
+              </button>
+  
+            <div class="col-container">
+                <div class="col-3">
+                    <div class="card card-dark-shadow">
+                        <img style="border-radius: 5px; margin: 0 0" loading="lazy" src="slike/Placeholder/Image.png"  />
+                        <div class="card-container">
+                            <h2>Ahuse</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <a href="#" class="dribble-link">
+                                <b>View In Dribble</b>
+                               
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card card-dark-shadow">
+                        <img style="border-radius: 5px; margin: 0 0" loading="lazy" src="slike/Placeholder/Image-1.png" />
+                        <div class="card-container">
+                            <h2>App Dashboard</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <a href="#" class="dribble-link">
+                                <b>View In Dribble</b>
+                               
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card card-dark-shadow">
+                        <img style="border-radius: 5px; margin: 0 0" loading="lazy" src="slike/Placeholder/Image-2.png" />
+                        <div class="card-container">
+                            <h2>Easy Rent</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                            <a href="#" class="dribble-link">
+                                <b>View In Dribble</b>
+                             
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page blue-backgroud" id="testimonials">
+        <div class="col-container" style="justify-content: space-between">
+            <div class="row-container">
+                <div class="row-1">
+                    <b>Clients Feedback</b>
+                    <div class="title">Customer testimonials</div>
+                </div>
+
+                <div class="col-container">
+                    <div class="col-3">
+                        <div class="card card-container card-purple-border">
+                            <h2 style="color: var(--style-green)">★★★★★</h2>
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.
+                                Duis cursus, mi quis viverra."
+                            </p>
+                            <div style="flex-direction: row">
+                                <img loading="lazy" src="slike/Avatar Image.png" class="inline-icon-x"  />
+                                <div style="flex-direction: column">
+                                    <b>Diane Russell</b>
+                                    Starbucks
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-container card-purple-border">
+                            <h2 style="color: var(--style-green)">★★★★★</h2>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.
+                                Duis cursus, mi quis viverra."</p>
+                            <div style="flex-direction: row">
+                                <img loading="lazy" src="slike/Avatar Image-1.png" class="inline-icon-x"  />
+                                <div style="flex-direction: column">
+                                    <b>Kristin Wattson</b>
+                                    Louis Vuitton
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-container card-purple-border">
+                            <h2 style="color: var(--style-green)">★★★★★</h2>
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.
+                                Duis cursus, mi quis viverra."</p>
+                            <div style="flex-direction: row">
+                                <img loading="lazy" src="slike/Avatar Image-2.png" class="inline-icon-x"  />
+                                <div style="flex-direction: column">
+                                    <b>Kathryn Murphy</b>
+                                    McDonald's
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="contact">
+        <div class="row-container">
+            <b>Get In Touch</b>
+            <br>
+            <div class="title">Contact Me</div>
+            <br>
+            <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+
+            <div class="form-container">
+                <div class="form-row-container">
+                    <div class="col-2">
+                        <label style="margin-top: 32px;">
+                            First name:
+                            <input type="text" class="form-input" name="first_name" required>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label style="margin-top: 32px;">
+                            Last name:
+                            <input type="text" class="form-input" name="last_name" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row-container">
+                    <div class="col-2">
+                        <label style="margin-top: 32px;">
+                            Email:
+                            <input type="text" class="form-input" name="email" required>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label style="margin-top: 32px;">
+                            Phone:
+                            <input type="text" class="form-input" name="phone" required>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row-container">
+                <label style="margin-top: 32px;width: 100%">
+                    Choose a topic:
+                    <select class="form-input form-select" name="topic" style="width: 100%" required>
+                        <option value="0">Select one...</option>
+                    </select>
+                </label>
+            
+            </div>
+            <div class="form-row-container">
+                <label for="message" style="margin-top: 32px;">
+                    Message:
+                    
+                
+                </label>
+               
+<textarea id="message" type="text" minlength="10" class="form-input" style="width: 100%" name="message" required
+                placeholder="Type your message..."  ></textarea>
+            </div>
+          
+                <div style="width: 100%; padding-top: 32px ;">
+                    <input id="termsAcceptance" type="checkbox" class="form-input" name="termsAcceptance" required>
+                    <label for="termsAcceptance" style="font-size: 14px;">
+                        I accept the terms
+                    </label>
+                </div>
+                <div class="button-submit">
+                <button>Submit</button></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="blue-backgroud" style="margin: 2vh 0">
+        <div class="footer">
+            <img loading="lazy" class="logo" src="Slike/Logo.png"/>
+            <nav class="navbar">
+                <a id="selected" href="#">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About me</a>
+                <a href="#contact">Contact</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#portfolio">Portfolio</a>
+            </nav>
+            <div style="justify-content: center">
+                <a href="https://web.facebook.com/?_rdc=1&_rdr" style="text-decoration: none">
+                    <img class="inline-icon-sm" loading="lazy" src="slike/Facebook.png" />
+                </a>
+                <a href="https://www.instagram.com/" style="text-decoration: none">
+                    <img class="inline-icon-sm" loading="lazy" src="slike/Instagram.png" />
+                </a>
+                <a href="https://twitter.com/home" style="text-decoration: none">
+                    <img class="inline-icon-sm" loading="lazy" src="slike/Twitter.png" />
+                </a>
+                <a href="https://hr.linkedin.com/" style="text-decoration: none">
+                    <img class="inline-icon-sm" loading="lazy" src="slike/LinkedIn.png" />
+                </a>
+            </div>
+        </div>
+        <hr class="solid" style="margin: 1vh 2vw">
+
+
+
+
+
+        <div class="footer">
+            <p>
+                Made by <a style="text-decoration: none">Klara-Iva</a> with 💕
+            </p>
+            <div id="footerLinks">
+                <a href="#" style="text-decoration: none;margin-right:20px ;">
+                         Privacy policy    
+                </a>
+                <a href="#" style="text-decoration: none;margin-right:20px ;">
+                    Terms of service
+                </a>
+                <a href="" style="text-decoration: none; margin-right:20px ;">
+                    Cookie settings
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
