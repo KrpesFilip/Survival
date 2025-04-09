@@ -1,0 +1,61 @@
+Formula:
+
+If the layer has NinNin​ input neurons and NoutNout​ output neurons, then the number of parameters is:
+Number of Parameters=(Nin×Nout)+Nout
+Number of Parameters=(Nin​×Nout​)+Nout​
+
+Where:
+
+    NinNin​ is the number of input neurons (i.e., the dimension of the input to that layer),
+
+    NoutNout​ is the number of output neurons (i.e., the number of neurons in that layer),
+
+    The (Nin×Nout)(Nin​×Nout​) term corresponds to the weights, and
+
+    The NoutNout​ term corresponds to the biases.
+
+Example:
+
+If a layer has 100 input neurons and 50 output neurons, the number of parameters is:
+Parameters=(100×50)+50=5000+50=5050
+Parameters=(100×50)+50=5000+50=5050
+2. Convolutional Layers
+
+For convolutional layers, the parameters are determined by the size of the filters (kernels) and the number of filters.
+Formula:
+
+If the convolutional layer has:
+
+    FoutFout​ filters (also called kernels),
+
+    Each filter has a size of (Kh,Kw)(Kh​,Kw​) (height and width),
+
+    The input has CinCin​ channels (depth of the input, e.g., 3 for RGB images),
+
+Then, the number of parameters is:
+Number of Parameters=(Kh×Kw×Cin×Fout)+Fout
+Number of Parameters=(Kh​×Kw​×Cin​×Fout​)+Fout​
+
+Where:
+
+    Kh×KwKh​×Kw​ is the size of each filter,
+
+    CinCin​ is the number of input channels,
+
+    FoutFout​ is the number of filters,
+
+    The FoutFout​ term corresponds to the biases for each filter.
+
+Example:
+
+Suppose you have:
+
+    A filter size of 3x3,
+
+    64 filters,
+
+    An input with 3 channels (e.g., an RGB image).
+
+The number of parameters for this convolutional layer would be:
+Parameters=(3×3×3×64)+64=1728+64=1792
+Parameters=(3×3×3×64)+64=1728+64=1792
