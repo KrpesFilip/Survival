@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<style>
+
+
+	</style>
+</head>
+
+<body>
+	
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var width = 600;
+var height = 600;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var circles = svg.append("circle")
+    .attr("r", 0.125*width)
+    .attr("cx", width/2)
+    .attr("cy", width/2)
+    .attr("fill", "pink")
+    .attr("fill-opacity", 0)
+    .attr("stroke", "limegreen")
+    .attr("opacity", 1)
+    .transition()
+    .delay(3000) 
+    .duration(5000)
+    .attr("fill-opacity", 1)
+    .transition() 
+    .duration(5000)
+    .attr("r", width/2)
+    .transition()
+    .duration(3000)
+    .attr("opacity", 0);
+
+</script>
+
+</body>

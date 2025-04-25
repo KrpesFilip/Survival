@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<style>
+
+
+	</style>
+</head>
+
+<body>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var width = 600;
+var height = 400;
+var radius = 30;
+var rect_w = 60;
+var rect_h = 30;
+
+function translate(d) {
+  return "translate(" + 0 + "," + (height - rect_h - radius * 2 - 5) + ")";
+}
+
+function translate_tekuce(d) {
+  return "translate(" + 0 + "," + (height - rect_h - radius * 2 + 5) + ")";
+}
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background","limegreen");
+
+svg.append("circle")
+    .attr("r", radius)
+    .style("fill", "bluesteel")
+    .style("stroke", "red")
+    .attr("cx", 0.2 * width)
+    .attr("cy", radius + 5)
+    .transition()
+    .delay(1000)
+    .duration(1000)
+    .ease("bounce")
+    .attr("transform", translate);
+
+svg.append("rect")
+    .attr("width", rect_w)
+    .attr("height", rect_h)
+    .attr("x", 0.2 * width - rect_w / 2)
+    .attr("y", height - rect_h)
+    .style("fill", "gray")
+    .style("stroke", "black");
+
+svg.append("circle")
+    .attr("r", radius)
+    .style("fill", "bluesteel")
+    .style("stroke", "red")
+    .attr("cx", 0.5 * width)
+    .attr("cy", radius + 5)
+    .transition()
+    .delay(2000)
+    .duration(2000)
+    .ease("elastic")
+    .attr("transform", translate);
+
+svg.append("rect")
+    .attr("width", rect_w)
+    .attr("height", rect_h)
+    .attr("x", 0.5 * width - rect_w / 2)
+    .attr("y", height - rect_h)
+    .style("fill", "orange")
+    .style("stroke", "black");
+
+svg.append("circle")
+    .attr("r", radius)
+    .style("fill", "bluesteel")
+    .style("stroke", "red")
+    .attr("cx", 0.8 * width)
+    .attr("cy", radius + 5)
+    .transition()
+    .delay(3500)
+    .duration(2000)
+    .ease("elastic")
+    .attr("transform", translate_tekuce);
+
+svg.append("rect")
+    .attr("width", rect_w)
+    .attr("height", rect_h)
+    .attr("x", 0.8 * width - rect_w / 2)
+    .attr("y", height - rect_h)
+    .style("fill", "blue")
+    .style("stroke", "black");
+
+</script>
+
+</body>

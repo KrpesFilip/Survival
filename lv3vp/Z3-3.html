@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<style>
+
+
+	</style>
+</head>
+
+<body>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var width = 600;
+var height = 600;
+var rect_h = 200;
+var rect_w = 100;
+
+function translate_x(d) {
+  return "translate(" + (width - rect_w) + "," + 0 + ")";
+}
+
+function translate_y(d) {
+  return "translate(" + (width - rect_w) + "," + (height - rect_h) + ")";
+}
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background","limegreen");
+
+svg.append("rect")
+    .attr("width", rect_w)
+    .attr("height", rect_h)
+    .style("fill", "bluesteel")
+    .style("stroke", "red")
+    .transition()
+    .delay(1000)
+    .attr("transform", translate_x)
+    .transition()
+    .delay(2000)
+    .attr("transform", translate_y);
+
+
+</script>
+
+</body>

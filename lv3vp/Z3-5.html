@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head lang=en>
+<meta charset="utf-8">
+<title>Solar System</title>
+</head>
+
+
+<body>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 700;
+var height = 700;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background", "#002131")
+    .append("g");
+
+var MercuryData = [];
+var VenusData = [];
+var EarthData = [];
+var MarsData = [];
+var JupiterData = [];
+var SaturnData = [];
+var UranusData = [];
+
+var t_circle = d3.map();
+t_circle.set("id", 1);
+t_circle.set("cr", 6);
+t_circle.set("rotr", 80);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 2000);
+
+MercuryData.push(t_circle);
+
+t_circle = d3.map();
+t_circle.set("id", 2);
+t_circle.set("cr", 10);
+t_circle.set("rotr", 120);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 4000);
+
+VenusData.push(t_circle);
+
+t_circle = d3.map();
+t_circle.set("id", 3);
+t_circle.set("cr", 8);
+t_circle.set("rotr", 160);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 6000);
+
+EarthData.push(t_circle);
+
+t_circle = d3.map();
+t_circle.set("id", 4);
+t_circle.set("cr", 7);
+t_circle.set("rotr", 200);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 8000);
+
+MarsData.push(t_circle);
+
+t_circle = d3.map();
+t_circle.set("id", 5);
+t_circle.set("cr", 30);
+t_circle.set("rotr", 240);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 12000);
+
+JupiterData.push(t_circle);
+
+t_circle = d3.map();
+t_circle.set("id", 6);
+t_circle.set("cr", 20);
+t_circle.set("rotr", 300);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 16000);
+
+SaturnData.push(t_circle);
+
+t_circle = d3.map();
+t_circle.set("id", 7);
+t_circle.set("cr", 14);
+t_circle.set("rotr", 340);
+t_circle.set("rtype", "circle")
+t_circle.set("time", 20000);
+
+UranusData.push(t_circle);
+
+var easeparam = "linear";
+
+var Mercury = svg.selectAll("circle")
+	.data(MercuryData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#FF5733")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatMercury();
+
+function repeatMercury() {
+    Mercury
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatMercury);
+}
+
+var Venus = svg.selectAll("circle")
+	.data(VenusData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#BDBA00")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatVenus();
+
+function repeatVenus() {
+    Venus
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatVenus);
+}
+
+var Earth = svg.selectAll("circle")
+	.data(EarthData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#45EC00 ")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatEarth();
+
+function repeatEarth() {
+    Earth
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatEarth);
+}
+
+var Mars = svg.selectAll("circle")
+	.data(MarsData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#EC1D00 ")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatMars();
+
+function repeatMars() {
+    Mars
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatMars);
+}
+
+var Jupiter = svg.selectAll("circle")
+	.data(JupiterData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#DA1B01")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatJupiter();
+
+function repeatJupiter() {
+    Jupiter
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatJupiter);
+}
+
+var Saturn = svg.selectAll("circle")
+	.data(SaturnData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#9E9E90 ")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatSaturn();
+
+function repeatSaturn() {
+    Saturn
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatSaturn);
+}
+
+var Uranus = svg.selectAll("circle")
+	.data(UranusData, function(d) { return d.get('id');})
+	.enter()
+	.append("circle")
+    .style("fill", "#00F1D2")
+	.attr("r", function(d)	{ return d.get('cr'); });
+
+repeatUranus();
+
+function repeatUranus() {
+    Uranus
+	.transition()
+	.duration(function(d) { return d.get('time')})
+	.ease(easeparam)
+	.attrTween("transform", translateFn())
+    .each("end", repeatUranus);
+}
+
+function translateFn() {
+
+  return function(d, i, a) {
+    return function(t) {
+
+	var t_x, t_y;
+
+	if (d.get('rtype') == 'circle')	{
+		var rotation_radius = d.get('rotr');
+		var t_angle = (2 * Math.PI) * t;
+		var t_x = rotation_radius * Math.cos(t_angle);
+		var t_y = rotation_radius * Math.sin(t_angle);
+	}
+
+	return "translate(" + ((width/2) + t_x) + "," + (height/2 + t_y) + ")";
+    };
+  };
+}
+
+svg.append("circle")
+    .attr("r", "15")
+    .style("fill", "#FFEB00")
+    .attr("cx", width/2)
+    .attr("cy", height/2);
+
+</script>
+</body>
+</html>
