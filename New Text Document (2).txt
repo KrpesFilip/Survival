@@ -1,0 +1,15 @@
+def remove_outliers_iqr(df, column):
+    Q1 = df[column].quantile(0.25)
+    Q3 = df[column].quantile(0.75)
+    IQR = Q3 - Q1
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    return df[(df[column] >= lower_bound) & (df[column] <= upper_bound)]
+
+cols = ['RETAIL SALES', 'RETAIL TRANSFERS', 'WAREHOUSE SALES']
+df_pair = data[cols]
+df_pair = df_pair[(df_pair != 0).any(axis=1)]
+
+df1 = data_clean[data_clean['RETAIL SALES'] != 0.00]
+plt.xlim(0, 150) 
+dfTest = np.log1p(df3['RETAIL SALES'])
